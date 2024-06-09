@@ -49,6 +49,8 @@ pip install scikit-learn
 4. Generating Predictions
 - Predict on Test Data: Generate predictions on the test data.
 
-5. Save the Model and Prediction
-- Save Submission File: Save the formatted submission to a CSV file.
+5. Save the Model and Prediction:
+- The model is saved using the pickle module after it is trained.
+- The formatted predictions are saved to Aiqod_submission.csv.
+
 

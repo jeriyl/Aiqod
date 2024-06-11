@@ -1,6 +1,6 @@
 # Machine Learning Model for Text Classification
 
-This project involves building a machine learning model to predict the probability that a piece of text belongs to a particular class. The model is trained using various features extracted from the text, including Bag of Words, TF-IDF vectorization, and word embedding techniques.
+In this project, the data has been preprocessed using techniques such as Bag of Words, TF-IDF vectorization, and word embedding. The objective is to build a machine learning model to predict the probabilities for a multilabel classification problem.
 
 ## Project Structure
 

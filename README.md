@@ -1,4 +1,4 @@
-# Machine Learning Model for Text Classification
+# Multilabel Text Classification Project
 
 In this project, the data has been preprocessed using techniques such as Bag of Words, TF-IDF vectorization, and word embedding. The objective is to build a machine learning model to predict the probabilities for a multilabel classification problem.
 

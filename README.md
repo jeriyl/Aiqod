@@ -9,7 +9,7 @@ This project involves building a machine learning model to predict the probabili
 - `test.csv`: Contains the test data for which predictions need to be made.
 - `sampleSubmission.csv`: Example of the expected output format for the test predictions.
 
-- `Aiqod_submission.csv`: Output file containing the predictions in the required format.
+- `Aiqod_submission.xlsx`: Output file containing the predictions in the required format.
 
 
 ## Requirements
@@ -34,23 +34,20 @@ pip install scikit-learn
 ## Explanation 
 
 ### 1. Data Loading and Preprocessing:
-- Load Data: The training features, test features, and training labels are loaded from CSV files.
-- Identify Hash Columns: Define a function to identify hash columns and filter them out for separate handling.
-- Label Encoding: Apply label encoding to non-hash categorical columns in both train and test data.
-- Hash Encoding: Apply a hash function to hash columns in both train and test data.
+- The training features, test features, and training labels are loaded from CSV files.
+- I identified a categorical column and used a Label Encoder to convert the data into numerical values.
+- I identified the hash value column and used the hashlib library to convert the data into numerical values.  I then applied the hash function to the hash columns in both the training and testing datasets.
 
 ### 2. Data Cleaning and Alignment:
-- Remove Duplicates and Align Indices: Ensure there are no duplicate rows and align indices between training features and labels.
+- I removed the duplicates and aligned the indices for the training features and labels.
 
 ### 3. Model Training:
-- Split Data: Split the training data into training and validation sets.
-- Initialize and Train Model: Initialize a LightGBM classifier and wrap it with MultiOutputClassifier to handle multi-label classification.
+- Since the model is a multilabel model, I used MultiOutputClassifier and LightGBM to build a model.
+- I evaluated the model for each target separately using Classification Report.
+- Predictions were made using the test_df.
 
-### 4. Generating Predictions
-- Predict on Test Data: Generate predictions on the test data.
-
-### 5. Save the Model and Prediction:
+### 4. Save the Model and Prediction:
 - The model is saved using the pickle module after it is trained.
-- The formatted predictions are saved to Aiqod_submission.csv.
+- The formatted predictions are saved to Aiqod_submission.csv and Aiqod_submission.xlsx
 
 
